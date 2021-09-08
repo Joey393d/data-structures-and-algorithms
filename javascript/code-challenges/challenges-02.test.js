@@ -57,9 +57,17 @@ You may choose to complete this challenge using a for loop, for...in syntax, or 
 For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
 
-const forLoopTwoToThe = (arr) => {
-  // Solution code here...
-  let result = arr.map((n) => Math.pow(2, n));
+const forLoopTwoToThe = (integers) => {
+  let result = [];
+
+  for ( let i = 0; i < integers.length; i++) {
+    let integer = integers[i];
+    let twoPower = Math.pow(2, integer);
+    result.push(twoPower);
+
+
+  }
+
   return result;
 };
 
