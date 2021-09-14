@@ -33,8 +33,9 @@ Write a function called sortNames that takes an array of names and sorts them al
 For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
-const sortNames = (arr) => {
-  // Solution code here...
+const sortNames = (name) => {
+  name.sort;
+  return name;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,8 +46,12 @@ Write a function called sortNumbers that takes an array of numbers and sorts the
 HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
-const sortNumbers = (arr) => {
-  // Solution code here...
+const sortNumbers = (numb) => {
+  numb.sort ((a,b) => {
+    if (a < b) {return -1;}
+    if (a > b) {return +1;}
+    else {return 0;}
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
