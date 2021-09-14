@@ -55,7 +55,12 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  
+  charArray.sort(function (a,b) {
+    let aKidCount = a.children.length;
+    let bKidCount = b.children.length;
+
+    return aKidCount - bKidCount;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -124,7 +129,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let regex = /\b[A-Z]\w*/g;
+  return str.match(regex) || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
